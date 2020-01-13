@@ -4,20 +4,21 @@ Simple Setup Project
 ## Prerequisites
 
 1. Install Ansible (Ubuntu & Co.)
-
-
-    sudo apt-get install software-properties-common
-    sudo apt-add-repository ppa:ansible/ansible
-    sudo apt-get update
-    sudo apt-get install ansible
+```bash
+sudo apt install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update
+sudo apt install ansible
+```
 
 Other platforms: see [Installation Guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
 ## Usage
 
 ### Remote Repository
-
-    sudo ansible-pull -U https://github.com/<user_name>/simple-setup.git
+```bash
+sudo ansible-pull -U https://github.com/<user_name>/simple-setup.git
+```
 
 ## More
 
