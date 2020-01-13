@@ -1,0 +1,11 @@
+---
+- name: Install JDK 8
+  become: true
+  apt:
+    name: openjdk-8-jdk
+
+- name: Set JAVA_HOME
+  lineinfile:
+    dest: "~/.profile"
+    regexp: "^export JAVA_HOME="
+    line: "export JAVA_HOME={{ jdk_java_home }}"

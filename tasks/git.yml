@@ -1,0 +1,22 @@
+---
+- name: check vars
+  assert:
+    that:
+      - "user_name is defined"
+      - "user_email is defined"
+
+- name: Install git packages
+  become: true
+  apt: name={{item}}
+  with_items:
+    - git
+    - tig
+
+- name: Configure Git
+  git_config:
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
+    scope: global
+  with_items:
+    - { name: 'user.name', value: "{{ user_name }}" }
+    - { name: 'user.email', value: "{{ user_email }}"}

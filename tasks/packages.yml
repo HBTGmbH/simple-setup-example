@@ -1,0 +1,8 @@
+- name: Install packages
+  apt: name={{item}}
+  with_items:
+    - jq
+    - curl
+    - tree
+    - tmux
+    - vim
