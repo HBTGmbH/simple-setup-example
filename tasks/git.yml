@@ -7,8 +7,8 @@
 
 - name: Install git packages
   become: true
-  apt: name={{item}}
-  with_items:
+  apt:
+    pkg:
     - git
     - tig
 

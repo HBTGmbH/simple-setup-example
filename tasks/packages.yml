@@ -1,6 +1,6 @@
 - name: Install packages
-  apt: name={{item}}
-  with_items:
+  apt:
+    pkg:
     - jq
     - curl
     - tree

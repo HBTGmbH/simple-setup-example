@@ -17,7 +17,7 @@ Other platforms: see [Installation Guide](https://docs.ansible.com/ansible/lates
 
 ### Remote Repository
 ```bash
-sudo ansible-pull -U https://github.com/<user_name>/simple-setup.git
+sudo ansible-pull -U https://github.com/<user_name>/simple-setup-example.git
 ```
 
 ## More
