@@ -6,7 +6,7 @@
       - "user_email is defined"
 
 - name: Install git packages
-  become: true
+  become: yes
   apt:
     pkg:
     - git

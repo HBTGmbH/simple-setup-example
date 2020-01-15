@@ -53,17 +53,8 @@
   become: yes
   file:
     src: '{{ intellij_install_dir }}/bin/idea.sh'
-    dest: /usr/local/bin/idea
+    dest: {{ ansible_env.HOME }}/.local/bin/idea
     state: link
     owner: root
     group: root
     mode: 'u=rwx,go=rx'
-
-- name: install IntelliJ IDEA desktop file
-  become: yes
-  template:
-    src: ../files/jetbrains-idea.desktop.j2
-    dest: '/usr/share/applications/{{ intellij_desktop_filename }}'
-    owner: root
-    group: root
-    mode: 'u=rw,go=r'
