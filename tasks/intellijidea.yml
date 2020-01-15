@@ -30,7 +30,6 @@
   when: not stat_install_dir.stat.exists
 
 - name: create IntelliJ IDEA installation directory
-  become: yes
   file:
     state: directory
     owner: root
@@ -39,7 +38,6 @@
     dest: '{{ intellij_install_dir }}'
 
 - name: install IntelliJ IDEA
-  become: yes
   unarchive:
     src: '{{ intellij_download_dir }}/{{ intellij_redis_filename }}'
     remote_src: yes
@@ -50,7 +48,6 @@
     creates: '{{ intellij_install_dir }}/bin'
 
 - name: create bin link
-  become: yes
   file:
     src: '{{ intellij_install_dir }}/bin/idea.sh'
     dest: '{{ ansible_env.HOME }}/.local/bin/idea'
