@@ -53,7 +53,7 @@
   become: yes
   file:
     src: '{{ intellij_install_dir }}/bin/idea.sh'
-    dest: {{ ansible_env.HOME }}/.local/bin/idea
+    dest: '{{ ansible_env.HOME }}/.local/bin/idea'
     state: link
     owner: root
     group: root

@@ -9,7 +9,7 @@ jdk_java_home: "/usr/lib/jvm/java-8-openjdk-amd64/"
 intellij_version: '2019.3.1'
 intellij_mirror: 'http://download.jetbrains.com/idea'
 intellij_edition: ultimate
-intellij_install_dir: {{ ansible_env.HOME }}/idea/idea-{{ intellij_edition }}-{{ intellij_version }}
+intellij_install_dir: '{{ ansible_env.HOME }}/idea/idea-{{ intellij_edition }}-{{ intellij_version }}'
 intellij_download_dir: "{{ x_ansible_download_dir | default(ansible_env.HOME + '/.ansible/tmp/downloads') }}"
 intellij_idea_download_timeout_seconds: 600
 intellij_redis_filename: 'ideaIU-{{ intellij_version }}.tar.gz'
