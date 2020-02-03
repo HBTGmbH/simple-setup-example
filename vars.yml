@@ -1,12 +1,12 @@
 # User
-user_name: "Julian"
+user_name: "Julian Seegebarth"
 user_email: "julian.seegebarth@hbt.de"
 
 # JDK
 jdk_java_home: "/usr/lib/jvm/java-8-openjdk-amd64/"
 
 # IntelliJ IDEA
-intellij_version: '2019.3.1'
+intellij_version: '2019.3.2'
 intellij_mirror: 'http://download.jetbrains.com/idea'
 intellij_edition: ultimate
 intellij_install_dir: '{{ ansible_env.HOME }}/idea/idea-{{ intellij_edition }}-{{ intellij_version }}'
